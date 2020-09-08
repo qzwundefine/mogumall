@@ -1,32 +1,41 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+	<div id="app">
+		<router-view></router-view>
+		<mall-tabbar></mall-tabbar>
+	</div>
 </template>
 
+<script>
+	import mallTabbar from "./components/common/MallTabbar";
+
+	export default {
+		name: "App",
+		components: {
+			mallTabbar
+		}
+	};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+	.sku-toast {
+		border-radius: 3px;
+		box-sizing: border-box;
+		padding: 16px;
+	}
 
-#nav {
-  padding: 30px;
-}
+	.cart-toast {
+		border-radius: 3px;
+		padding: 10px 12px;
+		font-size: 14px;
+		color: #fff;
+		background-color: rgba(225, 42, 82, 0.7);
+		box-sizing: border-box;
+	}
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+	.fav-toast {
+		border-radius: 3px;
+		box-sizing: border-box;
+		padding: 10px 12px;
+		font-size: 14px;
+	}
 </style>

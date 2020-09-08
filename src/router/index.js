@@ -1,23 +1,69 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+
+import Home from 'views/home/Home.vue'
+import Shop from 'views/shop/Shop.vue'
+import Live from 'views/live/Live.vue'
+import Profile from 'views/profile/Profile.vue'
+import Details from 'views/details/Details'
+import Search from 'views/search/Search'
+import Cart from 'views/cart/Cart'
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
-    component: Home
+    path: '',
+    redirect: '/home'
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    path: '/home',
+    component: Home,
+    meta: {
+      title: '首页'
+    }
+  },
+  {
+    path: '/shop',
+    component: Shop,
+    meta: {
+      title: '商城'
+    }
+  },
+  {
+    path: '/live',
+    component: Live,
+    meta: {
+      title: '直播'
+    }
+  },
+  {
+    path: '/profile',
+    component: Profile,
+    meta: {
+      title: '我'
+    }
+  },
+  {
+    path: '/details',
+    component: Details,
+    meta: {
+      title: '商品详情'
+    }
+  },
+  {
+    path: '/search/:keyword',
+    component: Search,
+    meta: {
+      title: '搜索'
+    }
+  },
+  {
+    path: '/cart',
+    component: Cart,
+    meta: {
+      title: '购物车'
+    }
   }
 ];
 
