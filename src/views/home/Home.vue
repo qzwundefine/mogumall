@@ -10,13 +10,12 @@
 </template>
 
 <script>
-	import LaunchBanner from "components/content/LaunchBanner";
 	import SearchBar from "components/content/SearchBar";
 	import MallSwipe from "components/common/MallSwipe";
 	import NavGrid from "components/content/NavGrid";
 	import ContentItem from "components/content/ContentItem";
 
-	import { mallSearch } from "assets/mixin";
+	import { mallSearch, launchBanner } from "assets/mixin";
 
 	// 导入假数据
 	import {
@@ -28,7 +27,6 @@
 	export default {
 		name: "Home",
 		components: {
-			LaunchBanner,
 			SearchBar,
 			MallSwipe,
 			NavGrid,
@@ -41,7 +39,7 @@
 				swipeImages
 			};
 		},
-		mixins: [mallSearch]
+		mixins: [mallSearch, launchBanner]
 	};
 </script>
 

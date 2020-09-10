@@ -1,5 +1,6 @@
 import MallSearch from 'components/common/MallSearch'
 import QuickNav from 'components/common/quicknav/QuickNav'
+import LaunchBanner from 'components/content/LaunchBanner'
 
 export const mallSearch = {
   components: {
@@ -15,5 +16,11 @@ export const mallSearch = {
 export const quickNav = {
   components: {
     QuickNav
+  }
+}
+
+export const launchBanner = {
+  components: {
+    LaunchBanner
   }
 }

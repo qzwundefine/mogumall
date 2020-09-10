@@ -17,7 +17,6 @@
 </template>
 
 <script>
-	import LaunchBanner from "components/content/LaunchBanner";
 	import DetailsNav from "./childComp/DetailsNav";
 	import DetailsSwipe from "./childComp/DetailsSwipe";
 	import ActivityBanner from "./childComp/banner/ActivityBanner";
@@ -30,7 +29,7 @@
 	import Product from "./childComp/product/Product";
 	import Footbar from "./childComp/Footbar.vue";
 
-	import { quickNav } from "assets/mixin";
+	import { quickNav, launchBanner } from "assets/mixin";
 
 	// 导入假数据
 	import {
@@ -45,7 +44,6 @@
 	export default {
 		name: "Details",
 		components: {
-			LaunchBanner,
 			DetailsSwipe,
 			DetailsNav,
 			ActivityBanner,
@@ -82,7 +80,7 @@
 				this.$refs.sku.showSku();
 			}
 		},
-		mixins: [quickNav]
+		mixins: [quickNav, launchBanner]
 	};
 </script>
 

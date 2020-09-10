@@ -1,15 +1,11 @@
 <template>
-	<launch-banner></launch-banner>
+	<div class="live">直播</div>
 </template>
 
 <script>
-	import LaunchBanner from "components/content/LaunchBanner";
-
 	export default {
 		name: "Live",
-		components: {
-			LaunchBanner
-		}
+		components: {}
 	};
 </script>
 

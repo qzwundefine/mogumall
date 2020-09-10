@@ -11,14 +11,13 @@
 </template>
 
 <script>
-	import LaunchBanner from "components/content/LaunchBanner";
 	import SearchBar from "components/content/SearchBar";
 	import ImgBlock from "components/content/ImgBlock";
 	import NavGrid from "components/content/NavGrid";
 	import Banner from "./childComp/Banner";
 	import GoodsList from "components/common/goodsList/GoodsList";
 
-	import { mallSearch } from "assets/mixin";
+	import { mallSearch, launchBanner } from "assets/mixin";
 
 	// 导入假数据
 	import { imgBlockData, gridData, goodsData } from "assets/fakeData/shopData";
@@ -26,7 +25,6 @@
 	export default {
 		name: "Shop",
 		components: {
-			LaunchBanner,
 			SearchBar,
 			ImgBlock,
 			NavGrid,
@@ -40,7 +38,7 @@
 				goodsData
 			};
 		},
-		mixins: [mallSearch]
+		mixins: [mallSearch, launchBanner]
 	};
 </script>
 
